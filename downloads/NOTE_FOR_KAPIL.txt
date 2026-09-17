@@ -1,0 +1,41 @@
+Hi Kapil,
+
+Here is the updated production build (Build 4303) — we verified it locally with Google's official bundletool on a real phone, and it launched perfectly with 0 crashes!
+
+=======================================================
+1. CRITICAL FIXES IN THIS BUILD:
+=======================================================
+• Crash on launch (WorkDatabase / WorkManager) FIXED:
+  - Completely purged the unused legacy AdMob SDK and its broken WorkDatabase initializer.
+  - The app bundle size dropped from 8.6 MB down to 4.9 MB (faster install, super smooth launch)!
+• Target SDK: Upgraded to API Level 36 (Android 16) as required by Google Play.
+• Advertising ID: Permission completely removed from the manifest!
+  👉 On the Advertising ID screen, select: "NO".
+• Shortcut Error: Clean static shortcuts (0 errors).
+• Version Code: 4303 | Version Name: 4.3.0
+
+=======================================================
+2. HOW TO UPLOAD IN PLAY CONSOLE:
+=======================================================
+1. Go to Production -> Edit release (or discard previous draft).
+2. Remove the old AAB by clicking the trash icon.
+3. Upload the attached file: Periodica-3D-v4.3.0-release.aab
+4. Release name: 4.3.0
+
+=======================================================
+3. ADVERTISING ID SCREEN IN APP CONTENT:
+=======================================================
+• Question: Does your app use an advertising ID?
+👉 Choose: "NO"
+• Click Save!
+
+=======================================================
+4. WHAT'S NEW IN THIS RELEASE (RELEASE NOTES):
+=======================================================
+• Interactive 3D Quantum Orbitals: Real-time electron wavefunctions and probability densities for s, p, d, and f subshells with nodal slicing.
+• 118 Elements with Dual Classification: IUPAC periodic table with secondary classification for Astatine and Polonium.
+• 3,000+ Nuclear Isotopes: Monte Carlo radioactive decay chamber with 6 decay modes.
+• 3D Molecular Compounds & Crystal Lattices: Interactive ball-and-stick models and Bravais unit cells.
+• Chemical Reaction Balancer: Linear algebra equation balancing with atom conservation.
+• 100% Offline-First, Zero In-App Ads, Privacy-First Architecture.
+=======================================================

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickShare P2P - Decentralized File & Folder Sharing</title>
+    <meta name="description" content="Serverless, high-speed file and folder sharing web app powered by WebTorrent and WebRTC. Unlimited file size, resume support, live speedometers, and instant QR codes.">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo-container">
+            <div class="logo-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                </svg>
+            </div>
+            <div class="logo-text">
+                <h1>QuickShare</h1>
+                <span>P2P & Cloud</span>
+            </div>
+        </a>
+        <div class="header-badges">
+            <span class="badge online">P2P Swarm Active</span>
+            <span class="badge">100% Serverless</span>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="hero">
+            <h2>Fast, Decentralized File Sharing</h2>
+            <p>Send files and entire folders directly between browsers with live speedometers, or generate instant 1-click cloud links for small files.</p>
+        </section>
+
+        <!-- Periodica 3D Official Release Downloads Hub -->
+        <section class="release-section">
+            <div class="release-header">
+                <div class="release-title">
+                    <span style="font-size: 1.8rem;">📦</span>
+                    <div>
+                        <h3>Periodica 3D &bull; Release Build 4303</h3>
+                        <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.15rem;">Version 4.3.0 &bull; Ready for Google Play Console Submission & Testing</div>
+                    </div>
+                </div>
+                <div class="release-badges-row">
+                    <span class="badge-verified">✓ WorkDatabase Crash Fixed</span>
+                    <span class="badge-sdk">Target SDK 36 (Android 16)</span>
+                    <span class="badge-verified">✓ Verified on Real Phone</span>
+                </div>
+            </div>
+
+            <div class="release-grid">
+                <!-- Card 1: AAB -->
+                <div class="release-item-card highlight">
+                    <div>
+                        <div class="release-item-icon">🚀</div>
+                        <div class="release-item-title">Google Play App Bundle (.aab)</div>
+                        <div class="release-item-desc">
+                            Official bundle to upload to Google Play Console. AdMob removed, background crash resolved, zero-tracking policy compliant.
+                        </div>
+                    </div>
+                    <div>
+                        <div class="release-item-meta">
+                            <span>📦 4.93 MB</span> &bull; <span>vCode: 4303</span>
+                        </div>
+                        <div class="release-btn-group">
+                            <a href="downloads/Periodica-3D-v4.3.0-release.aab" download="Periodica-3D-v4.3.0-release.aab" class="release-action-btn btn-dl-primary">
+                                ⬇ Download .AAB
+                            </a>
+                            <button onclick="copyDirectLink('downloads/Periodica-3D-v4.3.0-release.aab')" class="release-action-btn btn-dl-secondary" title="Copy direct link">
+                                📋 Copy Link
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: APK -->
+                <div class="release-item-card">
+                    <div>
+                        <div class="release-item-icon">📱</div>
+                        <div class="release-item-title">Direct Installable APK (.apk)</div>
+                        <div class="release-item-desc">
+                            Universal release APK for instant manual installation and testing on any Android phone (Android 7.0 to Android 16+).
+                        </div>
+                    </div>
+                    <div>
+                        <div class="release-item-meta">
+                            <span>📦 5.10 MB</span> &bull; <span>Signed Release</span>
+                        </div>
+                        <div class="release-btn-group">
+                            <a href="downloads/Periodica-3D-v4.3.0-release.apk" download="Periodica-3D-v4.3.0-release.apk" class="release-action-btn btn-dl-primary">
+                                ⬇ Download .APK
+                            </a>
+                            <button onclick="copyDirectLink('downloads/Periodica-3D-v4.3.0-release.apk')" class="release-action-btn btn-dl-secondary" title="Copy direct link">
+                                📋 Copy Link
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Documents and Notes -->
+            <div class="release-docs">
+                <span>📋 Guides & Credentials:</span>
+                <a href="downloads/NOTE_FOR_KAPIL.txt" target="_blank" class="release-doc-link">
+                    📄 Note for Kapil (Play Console Checklist)
+                </a>
+                <span>&bull;</span>
+                <a href="downloads/KEYSTORE_AND_BUILD_INFO.txt" target="_blank" class="release-doc-link">
+                    🔑 Keystore & Build Metadata
+                </a>
+            </div>
+        </section>
+
+        <!-- Tabs -->
+        <div class="tabs-nav">
+            <button id="tab-torrent" class="tab-btn active">
+                <span>⚡</span> P2P Torrent (Unlimited / Folders)
+            </button>
+            <button id="tab-cloud" class="tab-btn">
+                <span>☁️</span> Fast Cloud Link (< 100MB)
+            </button>
+        </div>
+
+        <!-- Panel 1: P2P Torrent -->
+        <div id="panel-torrent" class="tab-panel active">
+            <!-- Upload Dropzone -->
+            <div id="dropzone-torrent" class="dropzone">
+                <div class="dropzone-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="17 8 12 3 7 8"></polyline>
+                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                </div>
+                <h3>Drag & Drop Files or Entire Folders</h3>
+                <p>No file size limits. Browser-to-browser direct transfer via WebRTC torrent swarm.</p>
+                <div class="btn-group">
+                    <button id="btn-select-files" class="btn btn-primary">
+                        <span>📄</span> Select Files
+                    </button>
+                    <button id="btn-select-folder" class="btn btn-secondary">
+                        <span>📁</span> Select Entire Folder
+                    </button>
+                </div>
+                <input type="file" id="file-input-torrent" multiple style="display: none;">
+                <input type="file" id="folder-input-torrent" webkitdirectory directory multiple style="display: none;">
+            </div>
+
+            <!-- Transfer Status Card (Initially Hidden) -->
+            <div id="transfer-card-torrent" class="card" style="display: none;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <h3 style="font-size: 1.15rem; font-weight: 700;">Transfer Monitor</h3>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <button id="btn-pause-resume-torrent" class="btn btn-secondary" style="padding: 0.4rem 0.9rem; font-size: 0.8rem;">Pause</button>
+                    </div>
+                </div>
+
+                <!-- Live Speedometer HUD -->
+                <div class="hud-grid">
+                    <div class="hud-stat">
+                        <div class="hud-label">Upload Speed</div>
+                        <div id="stat-speed-up" class="hud-value speed-up">0.0 KB/s</div>
+                    </div>
+                    <div class="hud-stat">
+                        <div class="hud-label">Download Speed</div>
+                        <div id="stat-speed-down" class="hud-value speed-down">0.0 KB/s</div>
+                    </div>
+                    <div class="hud-stat">
+                        <div class="hud-label">Active Peers</div>
+                        <div id="stat-peers" class="hud-value">0</div>
+                    </div>
+                    <div class="hud-stat">
+                        <div class="hud-label">Est. Time (ETA)</div>
+                        <div id="stat-eta" class="hud-value">--</div>
+                    </div>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="progress-container">
+                    <div class="progress-header">
+                        <span id="progress-text-torrent">0%</span>
+                        <span id="progress-size-torrent">0 B / 0 B</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div id="progress-bar-torrent" class="progress-bar-fill"></div>
+                    </div>
+                </div>
+
+                <!-- Share Box -->
+                <div id="share-box-torrent" class="share-box" style="display: none;">
+                    <div style="font-size: 0.85rem; font-weight: 600; color: var(--accent-cyan);">
+                        🔗 Share this link with your friend to download:
+                    </div>
+                    <div class="share-input-row">
+                        <input type="text" id="share-link-torrent" class="share-input" readonly>
+                        <button id="btn-copy-torrent" class="btn btn-primary">Copy</button>
+                        <button id="btn-qr-torrent" class="btn btn-secondary">QR Code</button>
+                    </div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted);">
+                        ⚡ Keep this tab open while your friend downloads. As soon as they connect, transfer begins at maximum internet speed.
+                    </div>
+                </div>
+
+                <!-- File List in Torrent -->
+                <div style="margin-top: 1.5rem;">
+                    <div style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 0.5rem;">Package Contents:</div>
+                    <div id="torrent-file-list" class="file-list"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Panel 2: Cloud Fast-Share -->
+        <div id="panel-cloud" class="tab-panel">
+            <div id="dropzone-cloud" class="dropzone">
+                <div class="dropzone-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                    </svg>
+                </div>
+                <h3>Direct Cloud Upload (Files under 100MB)</h3>
+                <p>Generates an instant 1-click download link. You can close your browser tab after upload completes.</p>
+                <button id="btn-select-cloud" class="btn btn-primary">
+                    <span>☁️</span> Select File to Upload
+                </button>
+                <input type="file" id="file-input-cloud" style="display: none;">
+            </div>
+
+            <!-- Cloud Transfer Card -->
+            <div id="transfer-card-cloud" class="card" style="display: none;">
+                <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 1rem;">Cloud Upload Monitor</h3>
+
+                <div class="hud-stat" style="margin-bottom: 1.5rem;">
+                    <div class="hud-label">File Being Uploaded</div>
+                    <div id="cloud-file-name" style="font-size: 1.1rem; font-weight: 700; word-break: break-all;">--</div>
+                    <div id="cloud-file-size" style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">--</div>
+                </div>
+
+                <div class="progress-container">
+                    <div class="progress-header">
+                        <span>Upload Progress: <span id="progress-text-cloud">0%</span></span>
+                        <span>Upload Speed: <span id="stat-cloud-speed" style="color: var(--accent-cyan); font-weight: 700;">0.0 KB/s</span></span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div id="progress-bar-cloud" class="progress-bar-fill"></div>
+                    </div>
+                </div>
+
+                <div id="share-box-cloud" class="share-box" style="display: none;">
+                    <div style="font-size: 0.85rem; font-weight: 600; color: var(--accent-green);">
+                        ✅ Direct 1-Click Download Link Ready:
+                    </div>
+                    <div class="share-input-row">
+                        <input type="text" id="share-link-cloud" class="share-input" readonly>
+                        <button id="btn-copy-cloud" class="btn btn-primary">Copy Link</button>
+                        <a id="btn-download-cloud" class="btn btn-secondary" target="_blank">Download Now</a>
+                    </div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted);">
+                        Anyone with this link can download the file directly in their browser without any apps or signup.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- QR Code Modal -->
+    <div id="qr-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="qr-close" class="modal-close">&times;</button>
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;">Scan to Download</h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Scan this QR code with any phone camera to open and download instantly.</p>
+            <div class="qr-box">
+                <div id="qr-container"></div>
+            </div>
+            <div style="font-size: 0.75rem; color: var(--text-muted);">QuickShare Peer-to-Peer Transfer</div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Footer -->
+    <footer>
+        QuickShare Web &bull; Powered by WebTorrent & WebRTC &bull; 100% Client-Side on GitHub Pages
+    </footer>
+
+    <!-- Vendor Scripts -->
+    <script src="lib/webtorrent.min.js"></script>
+    <script src="lib/qrcode.min.js"></script>
+
+    <!-- Application Engines -->
+    <script src="js/storage-resume.js"></script>
+    <script src="js/torrent-engine.js"></script>
+    <script src="js/cloud-engine.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
