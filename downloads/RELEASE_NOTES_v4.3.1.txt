@@ -1,0 +1,31 @@
+================================================================================
+PERIODICA 3D - RELEASE NOTES FOR GOOGLE PLAY CONSOLE (v4.3.1)
+================================================================================
+
+Copy and paste the text below into the "Release notes" box in Google Play Console:
+
+--------------------------------------------------------------------------------
+[English - en-US]
+--------------------------------------------------------------------------------
+🎉 Welcome to the Official Production Release of Periodica 3D (v4.3.1)!
+
+What's New in this release:
+• Fixed temperature slider visibility when navigating between 2D, 3D Orbitals, Compounds, and subshell views.
+• Interactive thermodynamic state-of-matter simulation from absolute zero (0 K) to 6000 K with direct Kelvin, Celsius, and Fahrenheit conversion.
+• High-performance quantum orbital visualizer and nuclear isotope decay emulator.
+• Full support for Android 16 (Target SDK 36) with optimized battery efficiency and zero background tracking.
+• 100% ad-free, distraction-free educational chemistry companion.
+
+Thank you to all our closed testing community members for your invaluable feedback!
+
+--------------------------------------------------------------------------------
+[Hindi - hi-IN]
+--------------------------------------------------------------------------------
+🎉 Periodica 3D (v4.3.1) का आधिकारिक प्रोडक्शन रिलीज़!
+
+इस अपडेट में नया क्या है:
+• अलग-अलग व्यू (2D टेबल, 3D ऑर्बिटल, यौगिक) के बीच नेविगेशन के दौरान तापमान स्लाइडर की विज़िबिलिटी को पूरी तरह से ठीक किया गया।
+• 0 K से 6000 K तक इंटरएक्टिव तापमान नियंत्रण और केल्विन/सेल्सियस/फ़ारेनहाइट कनवर्टर।
+• Android 16 (Target SDK 36) के लिए पूर्ण अनुकूलन।
+• 100% विज्ञापन-मुक्त और सुरक्षित।
+================================================================================

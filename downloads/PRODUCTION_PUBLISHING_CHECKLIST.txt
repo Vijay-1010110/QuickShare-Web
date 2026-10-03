@@ -1,0 +1,60 @@
+================================================================================
+STEP-BY-STEP GUIDE: PROMOTING PERIODICA 3D FROM CLOSED TESTING TO PRODUCTION
+================================================================================
+
+Congratulations on finishing the 14-day Closed Testing requirement!
+Here is the exact step-by-step checklist to launch Periodica 3D to Production:
+
+--------------------------------------------------------------------------------
+STEP 1: APPLY FOR PRODUCTION ACCESS IN GOOGLE PLAY CONSOLE
+--------------------------------------------------------------------------------
+1. Log in to Google Play Console: https://play.google.com/console
+2. Select your app: "Periodica 3D".
+3. On the Dashboard, under the "Closed testing" section, you will see a banner:
+   "Apply for production access" / "Ready to apply for production".
+4. Click "Apply for production".
+5. Answer the quick questionnaire about your testing:
+   - How did you recruit testers? (e.g., "Invited students, chemistry enthusiasts, and colleagues via community email list").
+   - What feedback did you collect? (e.g., "Testers tested 3D orbital rendering, element search, and temperature state-of-matter simulation across different screen sizes. Minor navigation slider visibility was reported and fixed in v4.3.1").
+   - How did you address the feedback? (e.g., "Optimized view navigation state restoration and ensured zero crash runtime").
+6. Submit the application. Google usually approves production access within 1 to 2 business days (or immediately for qualified accounts).
+
+--------------------------------------------------------------------------------
+STEP 2: CREATE A PRODUCTION RELEASE
+--------------------------------------------------------------------------------
+1. In the left-hand navigation menu of Google Play Console:
+   Go to: Release -> Production.
+2. Click "Create new release" (top-right button).
+3. Under "App bundles", click "Upload".
+4. Select the file:
+   Periodica-3D-v4.3.1-production.aab (4.93 MB)
+   (Located in: C:\Users\Vijay\Downloads\Periodica_3D_PRODUCTION_RELEASE_v4.3.1_Build_4304\)
+5. Verify:
+   - Version code: 4304
+   - Target SDK: 36
+   - No warnings about advertising ID or background permissions.
+6. Under "Release name", enter:
+   4.3.1 (4304)
+7. Under "Release notes", copy and paste the text from:
+   RELEASE_NOTES_v4.3.1.txt
+8. Click "Next" (or "Review release").
+
+--------------------------------------------------------------------------------
+STEP 3: VERIFY POLICY & DATA SAFETY (IMPORTANT!)
+--------------------------------------------------------------------------------
+If asked about Advertising ID:
+- Select: "No, my app does not use an advertising ID."
+  (We stripped all AdMob code and AD_ID permissions from the build).
+If asked about Financial or In-App Purchases:
+- Select: "No".
+If asked about Data Collection:
+- Select: "No data is collected or shared with third parties."
+
+--------------------------------------------------------------------------------
+STEP 4: START ROLLOUT TO PRODUCTION
+--------------------------------------------------------------------------------
+1. Review all release details.
+2. Click "Save" and then "Start rollout to Production".
+3. Your app will enter Google's review queue and will be published live on Google Play!
+
+================================================================================
