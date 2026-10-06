@@ -3,58 +3,73 @@ STEP-BY-STEP GUIDE: PROMOTING PERIODICA 3D FROM CLOSED TESTING TO PRODUCTION
 ================================================================================
 
 Congratulations on finishing the 14-day Closed Testing requirement!
-Here is the exact step-by-step checklist to launch Periodica 3D to Production:
+Here is the exact step-by-step checklist to apply for production and release Periodica 3D (v4.3.2 / Build 4305):
 
 --------------------------------------------------------------------------------
 STEP 1: APPLY FOR PRODUCTION ACCESS IN GOOGLE PLAY CONSOLE
 --------------------------------------------------------------------------------
 1. Log in to Google Play Console: https://play.google.com/console
 2. Select your app: "Periodica 3D".
-3. On the Dashboard, under the "Closed testing" section, you will see a banner:
-   "Apply for production access" / "Ready to apply for production".
-4. Click "Apply for production".
-5. Answer the quick questionnaire about your testing:
-   - How did you recruit testers? (e.g., "Invited students, chemistry enthusiasts, and colleagues via community email list").
-   - What feedback did you collect? (e.g., "Testers tested 3D orbital rendering, element search, and temperature state-of-matter simulation across different screen sizes. Minor navigation slider visibility was reported and fixed in v4.3.1").
-   - How did you address the feedback? (e.g., "Optimized view navigation state restoration and ensured zero crash runtime").
-6. Submit the application. Google usually approves production access within 1 to 2 business days (or immediately for qualified accounts).
+3. On the Dashboard, under the "Closed testing" section, click:
+   "Apply for production".
+4. Fill in the questionnaire with the exact character-optimized answers below:
+
+[Q1] Who is the intended audience of your app? (Max 300 chars)
+Answer:
+Periodica 3D is designed for high school and university students, chemistry teachers, educators, laboratory researchers, and STEM enthusiasts who need an interactive, accurate, and completely offline periodic table and molecular science reference tool.
+
+[Q2] Describe how your app provides value to users (Max 300 chars)
+Answer:
+It visualizes all 118 elements with real-time thermodynamic state transitions (0-6000 K), interactive 3D electron orbital models, isotope decay chains, and property heatmaps. It runs 100% offline with zero ads, tracking, or account sign-ins, delivering fast, distraction-free learning.
+
+[Q3] How many installs do you expect your app to have in your first year?
+Select:
+0 – 10K
+
+[Q4] What changes did you make to your app based on what you learned during your closed test? (Max 300 chars)
+Answer:
+Based on tester feedback, we fixed temperature slider visibility across modals and view re-navigation, restored interactive ionization energy tier selectors (1st-4th) with heatmap gradients, optimized UI responsiveness for tablets/small phones, and updated the engine to Target SDK 36 (Android 16).
+
+[Q5] How did you decide that your app is ready for production? (Max 300 chars)
+Answer:
+All 14 days of closed testing were completed with active testers across multiple Android versions. The app recorded zero crashes or ANRs, passed Google Play 64-bit and Target SDK 36 requirements, operates completely offline without tracking, and all reported UI and navigation bugs were resolved.
+
+5. Submit the application. Once approved, the Production track will unlock.
 
 --------------------------------------------------------------------------------
 STEP 2: CREATE A PRODUCTION RELEASE
 --------------------------------------------------------------------------------
-1. In the left-hand navigation menu of Google Play Console:
-   Go to: Release -> Production.
-2. Click "Create new release" (top-right button).
+1. In the left navigation menu: Release -> Production.
+2. Click "Create new release" (top-right).
 3. Under "App bundles", click "Upload".
 4. Select the file:
-   Periodica-3D-v4.3.1-production.aab (4.93 MB)
-   (Located in: C:\Users\Vijay\Downloads\Periodica_3D_PRODUCTION_RELEASE_v4.3.1_Build_4304\)
+   Periodica-3D-v4.3.2-production.aab (4.93 MB)
+   (Located in: C:\Users\Vijay\Downloads\Periodica_3D_PRODUCTION_RELEASE_v4.3.2_Build_4305\)
 5. Verify:
-   - Version code: 4304
-   - Target SDK: 36
-   - No warnings about advertising ID or background permissions.
+   - Version code: 4305
+   - Target SDK: 36 (Android 16)
+   - Signing: Key matches upload key.
 6. Under "Release name", enter:
-   4.3.1 (4304)
+   4.3.2 (4305)
 7. Under "Release notes", copy and paste the text from:
-   RELEASE_NOTES_v4.3.1.txt
-8. Click "Next" (or "Review release").
+   RELEASE_NOTES_v4.3.2.txt
+8. Click "Next" -> "Save".
 
 --------------------------------------------------------------------------------
-STEP 3: VERIFY POLICY & DATA SAFETY (IMPORTANT!)
+STEP 3: VERIFY POLICY & DATA SAFETY
 --------------------------------------------------------------------------------
-If asked about Advertising ID:
+If prompted about Advertising ID:
 - Select: "No, my app does not use an advertising ID."
-  (We stripped all AdMob code and AD_ID permissions from the build).
-If asked about Financial or In-App Purchases:
+If prompted about Financial / Purchases:
 - Select: "No".
-If asked about Data Collection:
+If prompted about Data Collection:
 - Select: "No data is collected or shared with third parties."
 
 --------------------------------------------------------------------------------
 STEP 4: START ROLLOUT TO PRODUCTION
 --------------------------------------------------------------------------------
 1. Review all release details.
-2. Click "Save" and then "Start rollout to Production".
-3. Your app will enter Google's review queue and will be published live on Google Play!
+2. Click "Start rollout to Production".
+3. Your app will enter Google review and will be live on Google Play!
 
 ================================================================================

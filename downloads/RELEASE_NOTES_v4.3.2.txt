@@ -1,0 +1,32 @@
+================================================================================
+PERIODICA 3D - RELEASE NOTES FOR GOOGLE PLAY CONSOLE (v4.3.2 / BUILD 4305)
+================================================================================
+
+Copy and paste the text below into the "Release notes" box in Google Play Console:
+
+--------------------------------------------------------------------------------
+[English - en-US]
+--------------------------------------------------------------------------------
+🎉 Welcome to Periodica 3D (v4.3.2 Production Release)!
+
+What's New in this update:
+• Fixed temperature slider lifecycle: seamlessly hidden during initial startup and modal dialogs (Settings, Element Info, Wiki).
+• Restored interactive Ionization Energy level selectors (1st, 2nd, 3rd, 4th) with dynamic heatmap spectrum coloring across all 118 elements.
+• Smooth navigation restoration across 2D Grid, 3D Quantum Orbitals, Isotopes, and Compounds.
+• Target SDK 36 (Android 16) architecture with zero background battery drain.
+• 100% ad-free, distraction-free educational chemistry companion with zero tracking.
+
+Thank you to our testing community for helping make Periodica 3D better!
+
+--------------------------------------------------------------------------------
+[Hindi - hi-IN]
+--------------------------------------------------------------------------------
+🎉 Periodica 3D (v4.3.2) प्रोडक्शन रिलीज़!
+
+इस अपडेट में नया क्या है:
+• तापमान स्लाइडर का बेहतर लाइफसाइकिल: ऐप शुरू होने और सेटिंग्स/डायलॉग खुलने पर अनावश्यक ओवरले बंद।
+• आयनीकरण ऊर्जा (Ionization Energy) के 1st, 2nd, 3rd, 4th स्तरों के लिए नया इंटरएक्टिव सेलेक्टर और हीटमैप।
+• 2D टेबल, 3D ऑर्बिटल्स, आइसोटोप्स और यौगिकों के बीच सहज नेविगेशन।
+• Android 16 (Target SDK 36) के लिए पूर्ण अनुकूलन।
+• 100% विज्ञापन-मुक्त और सुरक्षित।
+================================================================================
